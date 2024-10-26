@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streaming</title>
+  <link rel="stylesheet" href="colors.css">
+</head>
+
+<style>
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  main {
+    padding-top: 80px;
+  }
+
+  .hero {
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }  
+
+  .hero-content {
+    max-width: 800px;
+    text-shadow: 2px 2px 3px rgb(34, 33, 33);
+    
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .featured-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .content-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .content-card:hover {
+    transform: scale(1.05);
+  }
+
+  .content-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .content-info {
+    padding: 1rem;
+  }
+
+  .content-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .content-genre {
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+
+  
+</style>
+
+
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">Stream</div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="movies.html">Filmes</a></li>
+          <li><a href="#" id="serie">Series</a></li>
+          <li><a href="#" id="anime">Anime</a></li>
+          <li><a href="account.html">Minha conta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Bem vindo!</h1>
+        <p>Descubra um universo de entretenimento ao seu alcance. Veja os filmes mais recentes, séries e animes, tudo em um só lugar!.</p>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2 class="section-title">Filmes</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <img src="images/batman.jpg"  width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">The Batman</h3>
+            <p class="content-genre">Sci-Fi, Action</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="images/fnaf.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Five Nights at Freddy's</h3>
+            <p class="content-genre">Terror, Comédia, Sci-Fi</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="images/joker.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Coringa</h3>
+            <p class="content-genre">Drama, Terror</p>
+          </div>
+        </div>
+        <a href="view.html" style="color: white; text-decoration: none;" >
+        <div class="content-card">
+          <img src="images/interestelar.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Interestelar</h3>
+            <p class="content-genre">Adventure, Fantasy, Sci-Fi</p>
+          </div>
+        </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <h2 class="section-title">Series</h2>
+      <div class="content-grid">
+        <div class="content-card">
+          <img src="images/arcane.jpg"  width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Arcane</h3>
+            <p class="content-genre">Sci-Fi, Drama, Cyberpunk</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="images/chainsawman.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Chainsaw Man</h3>
+            <p class="content-genre">Comédia, Drama, Terror, Suspense</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="images/doctorwho.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Doctor Who</h3>
+            <p class="content-genre">Comédia, Aventura, Fantasia, Sci-Fi</p>
+          </div>
+        </div>
+        <div class="content-card">
+          <img src="images/breakingbad.jpg" width="200" height="300">
+          <div class="content-info">
+            <h3 class="content-title">Breaking bad</h3>
+            <p class="content-genre">Drama, Suspense, Drogas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script>
+
+    const hero = document.querySelector('.hero');
+    const images = [
+      'images/imagem1.jpg',
+      'images/imagem2.jpg',
+      'images/imagem3.jpg',
+      'images/imagem4.jpg'
+    ];
+
+  let currentIndex = 0;
+
+  function changeBackground() {
+    hero.style.backgroundImage = `url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length;
+    hero.style.opacity = '0,2';
+  }
+
+
+    changeBackground();
+
+    setInterval(changeBackground, 5000);
+
+
+    document.getElementById('serie').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    alert("A página está desativada, mas o filme Interestelar está ativo");
+    });
+
+    document.getElementById('anime').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    alert("Esta página não está completa, mas o filme Interestelar está ativo");
+    });
+
+
+    </script>
+  </body>
+</html>

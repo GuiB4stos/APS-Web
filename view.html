@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assistir</title>
+    <link rel="stylesheet" href="colors.css">
+    <style>
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .media-info {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .media-poster {
+    flex-shrink: 0;
+  }
+
+  .media-poster img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .media-details {
+    flex-grow: 1;
+  }
+
+  .media-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .media-metadata {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .metadata-item {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .metadata-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .cast-crew {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .cast-crew-item {
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .cast-crew-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: --button-hover;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">Stream</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="movies.html">Filmes</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Anime</a></li>
+        <li><a href="account.html">Minha conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="media-info">
+      <div class="media-poster">
+        <img src="images/interestelar.jpg" width="300" height="450">
+      </div>
+      <div class="media-details">
+        <h1 class="media-title">Interestelar</h1>
+        <div class="media-metadata">
+          <div class="metadata-item fade-in" style="animation-delay: 0.1s;">
+            <div class="metadata-label">Genero</div>
+            <div>Ação, Sci-Fi</div>
+          </div>
+          <div class="metadata-item fade-in" style="animation-delay: 0.2s;">
+            <div class="metadata-label">Year</div>
+            <div>2014</div>
+          </div>
+          <div class="metadata-item fade-in" style="animation-delay: 0.3s;">
+            <div class="metadata-label">Duração</div>
+            <div>2h 15min</div>
+          </div>
+          <div class="metadata-item fade-in" style="animation-delay: 0.4s;">
+            <div class="metadata-label">Idioma</div>
+            <div>English</div>
+          </div>
+          <div class="metadata-item fade-in" style="animation-delay: 0.5s;">
+            <div class="metadata-label">Studio</div>
+            <div>Warner Bros</div>
+          </div>
+          <div class="metadata-item fade-in" style="animation-delay: 0.6s;">
+            <div class="metadata-label">Direto</div>
+            <div>Christopher Nolan</div>
+          </div>
+        </div>
+        <p class="fade-in" style="animation-delay: 0.7s;">
+          As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.
+        </p>
+        <a href="https://youtube.com/watch?v=i6avfCqKcQo" class="cta-button fade-in" style="animation-delay: 0.8s;">Assistir Agora!</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Elenco</h2>
+      <div class="cast-crew">
+        <div class="cast-crew-item fade-in" style="animation-delay: 0.9s;">
+          <img src="images/actor1.jpg" width="100" height="100">
+          <div>Matthew McCoughey</div>
+          <div>Copper</div>
+        </div>
+        <div class="cast-crew-item fade-in" style="animation-delay: 1s;">
+          <img src="images/actor2.jpg" width="100" height="100">
+          <div>Jessica Chastain</div>
+          <div>Murphy Cooper</div>
+        </div>
+        <div class="cast-crew-item fade-in" style="animation-delay: 1.1s;">
+          <img src="images/actor3.webp" width="100" height="100">
+          <div>Anne Hathaway</div>
+          <div>Amelia Brand</div>
+        </div>
+        <div class="cast-crew-item fade-in" style="animation-delay: 1.2s;">
+          <img src="images/actor4.jpg" width="100" height="100">
+          <div>Matt Damon</div>
+          <div>Dr. Mann</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      fadeElements.forEach(element => {
+        element.style.animationPlayState = 'paused';
+        observer.observe(element);
+      });
+    });
+
+    document.getElementById('serie').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    alert("A página está desativada");
+    });
+
+    document.getElementById('anime').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    alert("Esta página não está completa");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Streaming</title>
+    <link rel="stylesheet" href="colors.css">
+  </head>
+
+    <style>
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .content-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .content-item:hover {
+      transform: scale(1.05);
+    }
+
+    .content-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .content-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 0.5rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .content-item:hover .overlay {
+      transform: translateY(0);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #06eb78;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    header a:hover{
+      color: rgb(165, 165, 165);
+      transition: color 0.5s ease;
+    }
+    </style>
+  
+<body>
+
+  <header>
+    <div class="logo">Streaming</div>
+    <nav>
+      <ul>
+        <li><a href="#">Filmes</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Anime</a></li>
+        <li><a href="#">Minha conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Bem vindo</h1>
+      <p>Seu melhor site de streaming de filmes e series!</p>
+      <a href="sigin.html" class="cta-button pulse">Entre agora</a>
+    </section>
+
+    <section>
+      <h2>Em alta agora!</h2>
+        <div class="content-grid">
+          
+          <div class="content-item">
+            <img src="images/interestelar.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Interestelar</h3>
+              <p>Ação, Sci-Fi, Suspense</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/arcane.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Arcane</h3>
+              <p>Drama, Misterio, Sci-Fi, Cyberpunk</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/chainsawman.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Chainsaw Man</h3>
+              <p>Anime, Fantasia, Terror</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/doctorwho.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Doctor Who</h3>
+              <p>Sci-Fi, Aventura, Ação</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/fnaf.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Five Nights At Freddys</h3>
+              <p>Ação, Terror, Suspense</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/transformers.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Transformers</h3>
+              <p>Sci-Fi, Ação</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/joker.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Coringa</h3>
+              <p>Terror psicologico, suspense, drama</p>
+            </div>
+          </div>
+
+          <div class="content-item">
+            <img src="images/batman.jpg" width="200" height="300">
+            <div class="overlay">
+              <h3>Batman</h3>
+              <p>Sci-Fi, Heroí, Sombrio</p>
+            </div>
+          </div>
+
+        </div>
+
+        
+    </section>
+  </main>
+
+
+</body>
+</html>

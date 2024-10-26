@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conta</title>
+    <link rel="stylesheet" href="colors.css">
+  </head>
+<style>
+
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .account-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h1, h2 {
+    color: var(--secondary-color);
+  }
+
+  .profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+
+  .subscription-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: var(--button-hover);
+  }
+
+  .watchlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .watchlist-item {
+    width: calc(33.333% - 1rem);
+    position: relative;
+  }
+
+  .watchlist-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+  }
+
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: var(--secondary-color);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+</style>
+
+<body>
+  <header>
+    <div class="logo">StreamVerse</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="movies.html">Filmes</a></li>
+        <li><a id="serie" href="#">Series</a></li>
+        <li><a id="anime" href="#">Anime</a></li>
+        <li><a href="#">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Minha conta</h1>
+
+    <section class="account-section">
+      <h2>Informações de perfil</h2>
+      <div class="profile-info">
+        <img src="images/account.png" alt="User profile picture showing a smiling person" class="profile-picture" width="100" height="100">
+        <div>
+          <h3>Guilherme Bastos</h3>
+          <p>guiviba.br@gmail.com</p>
+        </div>
+      </div>
+      <form id="profile-form">
+        <input type="text" name="name" placeholder="Name" value="Guilherme">
+        <input type="email" name="email" placeholder="Email" value="guiviba.br@gmail.com">
+        <input type="password" name="password" placeholder="New Password">
+        <button type="submit" class="button">Atualizar perfil</button>
+      </form>
+    </section>
+
+    <section class="account-section">
+      <h2>Inscrição</h2>
+      <div class="subscription-info">
+        <p>Plano atual: </p>
+        <button class="button">Atualizar plano</button>
+      </div>
+    </section>
+
+    <section class="account-section">
+      <h2>Historico</h2>
+      <div class="watchlist">
+        <div class="watchlist-item">
+          <img src="images/interestelar.jpg"  width="200" height="300">
+          <button class="remove-button">×</button>
+        </div>
+        <div class="watchlist-item">
+          <img src="images/arcane.jpg" width="200" height="300">
+          <button class="remove-button">×</button>
+        </div>
+        <div class="watchlist-item">
+          <img src="images/chainsawman.jpg" width="200" height="300">
+          <button class="remove-button">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-section">
+      <h2>Preferencias</h2>
+      <form id="preferences-form">
+        <div>
+          <label for="language">Idioma:</label>
+          <select id="language" name="language">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+          </select>
+        </div>
+        <div>
+          <label for="autoplay">Ativar autoplay</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="autoplay" name="autoplay" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div>
+          <label for="notifications">Notificações por email:</label>
+          <label class="toggle-switch">
+            <input type="checkbox" id="notifications" name="notifications" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button type="submit" class="button">Salvar alterações</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+
+
+    document.getElementById('serie').addEventListener('click', function(event) {
+    event.preventDefault();
+    alert("A página está desativada");
+    });
+
+    document.getElementById('anime').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    alert("Esta página não está completa");
+    });
+  </script>
+</body>
+</html>
